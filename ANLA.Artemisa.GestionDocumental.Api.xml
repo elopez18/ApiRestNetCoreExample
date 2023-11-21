@@ -1,0 +1,622 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ANLA.Artemisa.GestionDocumental.Api</name>
+    </assembly>
+    <members>
+        <member name="T:OrfeoServiceWCF.consultarRadicadosSalidaResponseConsultarRadicadosSalidaResult">
+            <remarks/>
+        </member>
+        <member name="P:OrfeoServiceWCF.consultarRadicadosSalidaResponseConsultarRadicadosSalidaResult.Any">
+            <remarks/>
+        </member>
+        <member name="P:OrfeoServiceWCF.consultarRadicadosSalidaResponseConsultarRadicadosSalidaResult.Any1">
+            <remarks/>
+        </member>
+        <member name="T:OrfeoServiceWCF.consultarRadicadoSalidaResponseConsultarRadicadoSalidaResult">
+            <remarks/>
+        </member>
+        <member name="P:OrfeoServiceWCF.consultarRadicadoSalidaResponseConsultarRadicadoSalidaResult.Any">
+            <remarks/>
+        </member>
+        <member name="P:OrfeoServiceWCF.consultarRadicadoSalidaResponseConsultarRadicadoSalidaResult.Any1">
+            <remarks/>
+        </member>
+        <member name="T:OrfeoServiceWCF.consultarMetadatosResponseConsultarMetadatosResult">
+            <remarks/>
+        </member>
+        <member name="P:OrfeoServiceWCF.consultarMetadatosResponseConsultarMetadatosResult.Any">
+            <remarks/>
+        </member>
+        <member name="P:OrfeoServiceWCF.consultarMetadatosResponseConsultarMetadatosResult.Any1">
+            <remarks/>
+        </member>
+        <member name="T:ANLA.Artemisa.GestionDocumental.Api.Controllers.DocumentoController">
+            <summary>
+            DocumentoController
+            </summary>
+        </member>
+        <member name="M:ANLA.Artemisa.GestionDocumental.Api.Controllers.DocumentoController.#ctor(ANLA.Artemisa.GestionDocumental.Api.Services.IDocumentoService,Microsoft.Extensions.Logging.ILogger{ANLA.Artemisa.GestionDocumental.Api.Controllers.DocumentoController})">
+            <summary>
+            Constructor DocumentoController
+            </summary>
+            <param name="DocumentoServices"></param>
+            <param name="logger"></param>
+        </member>
+        <member name="M:ANLA.Artemisa.GestionDocumental.Api.Controllers.DocumentoController.ConsultarDocumento(System.String,System.String)">
+            <summary>
+            Permite realizar la consulta de un documento específico.
+            </summary>
+            <remarks>
+            Metodo que permite realizar la consulta de un documento específico..
+            </remarks>
+            <param name="Usuario">Usuario con acceso a consultar.</param>
+            <param name="Documento">Número de radicado a consultar.</param>
+            <returns> Permite realizar la Consulta de un Documento específico.</returns>
+            <response code="200">La consulta del documento se realizó con éxito y se devolvió la información del documento.</response>
+            <response code="404">No se pudo realiza la consulta del documento especificado.</response>
+            <response code="550">Se presento un error al ejecutar el Metodo ConsultarDocumento.</response>
+        </member>
+        <member name="M:ANLA.Artemisa.GestionDocumental.Api.Controllers.DocumentoController.CargarDocumentoElectronico(System.String,System.String)">
+            <summary>
+            Permite realizar Cargar un Documento Electronico.
+            </summary>
+            <remarks>
+            Metodo que permite realizar Cargar un Documento Electronico.
+            </remarks>
+            <param name="Usuario">Usuario con acceso a consultar.</param>
+            <param name="Documento">Documento a cargar.</param>
+            <returns> Permite realizar la Carga de un Documento Electronico.</returns>
+            <response code="200">La Cargar del Documento Electronico se realizó con éxito y se devolvió la información del radicado.</response>
+            <response code="404">No se pudo Cargar Documento Electronico especificado.</response>
+            <response code="550">Se presento un error al ejecutar el Metodo CargarDocumentoElectronico.</response>
+        </member>
+        <member name="T:ANLA.Artemisa.GestionDocumental.Api.Controllers.ExpedienteController">
+            <summary>
+            ExpedienteController
+            </summary>
+        </member>
+        <member name="M:ANLA.Artemisa.GestionDocumental.Api.Controllers.ExpedienteController.#ctor(ANLA.Artemisa.GestionDocumental.Api.Services.IExpedienteService,Microsoft.Extensions.Logging.ILogger{ANLA.Artemisa.GestionDocumental.Api.Controllers.ExpedienteController})">
+            <summary>
+            Constructor ExpedienteController
+            </summary>
+            <param name="expedienteServices"></param>
+            <param name="logger"></param>
+        </member>
+        <member name="M:ANLA.Artemisa.GestionDocumental.Api.Controllers.ExpedienteController.ConsultarExpediente(System.String,System.String)">
+            <summary>
+            Permite realizar la consulta de un expediente específico.
+            </summary>
+            <remarks>
+            Metodo que permite realizar la consulta de un expediente específico..
+            </remarks>
+            <param name="Usuario">Usuario con acceso a consultar.</param>
+            <param name="Expediente">Número de radicado a consultar.</param>
+            <returns> Permite realizar la Consulta de un expediente específico.</returns>
+            <response code="200">La consulta del expediente se realizó con éxito y se devolvió la información del expediente.</response>
+            <response code="404">No se pudo realiza la consulta del expediente especificado.</response>
+            <response code="550">Se presento un error al ejecutar el Metodo ConsultarExpediente.</response>
+        </member>
+        <member name="T:ANLA.Artemisa.GestionDocumental.Api.Controllers.RadicadoController">
+            <summary>
+            RadicadoController
+            </summary>
+        </member>
+        <member name="M:ANLA.Artemisa.GestionDocumental.Api.Controllers.RadicadoController.#ctor(ANLA.Artemisa.GestionDocumental.Api.Services.IRadicadoService,Microsoft.Extensions.Logging.ILogger{ANLA.Artemisa.GestionDocumental.Api.Controllers.RadicadoController})">
+            <summary>
+            Constructor del Controller RadicadoController
+            </summary>
+            <param name="RadicadoServices"></param>
+            <param name="logger"></param>
+        </member>
+        <member name="M:ANLA.Artemisa.GestionDocumental.Api.Controllers.RadicadoController.ConsultarRadicado(System.String,System.String)">
+            <summary>
+            Consulta la información asociada a un radicado específico.
+            </summary>
+            <remarks>
+            Metodo consulta sobre Orfeo si el radicado ingresado existe o no.
+            </remarks>
+            <param name="Usuario">Usuario con acceso a consultar.</param>
+            <param name="Radicado">Número de radicado a consultar.</param>
+            <returns>Información detallada del radicado.</returns>
+            <response code="200">La consulta se realizó con éxito y se devolvió la información del radicado.</response>
+            <response code="404">No se encontró el radicado especificado.</response>
+            <response code="550">Se presento un error al realizar la consulta del Metodo ConsultarRadicado.</response>
+        </member>
+        <member name="M:ANLA.Artemisa.GestionDocumental.Api.Controllers.RadicadoController.IncluirRadicadoAExpediente(System.String,ANLA.Artemisa.GestionDocumental.Api.Dto.Radicado.IncluirRadicadoAExpediente)">
+            <summary>
+            Incluye radicados a un expediente
+            </summary>
+            <remarks>
+            Metodo sobre Orfeo para incluir un Radicado A un Expediente.
+            </remarks>
+            <param name="Usuario"></param>
+            <param name="Radicado"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ANLA.Artemisa.GestionDocumental.Api.Controllers.RadicadoController.ConsultarImagenRadicado(System.String,System.String)">
+            <summary>
+            Consulta la información asociada a una Imagen de un radicado específico.
+            </summary>
+            <remarks>
+            Metodo consulta sobre Orfeo si ahy una imagen asociada a un radicado ingresado existe o no.
+            </remarks>
+            <param name="Usuario">Usuario con acceso a consultar.</param>
+            <param name="Radicado">Número de radicado a consultar.</param>
+            <returns>Información detallada del radicado.</returns>
+            <response code="200">La consulta se realizó con éxito y se devolvió la información del radicado.</response>
+            <response code="404">No se encontró el radicado especificado.</response>
+            <response code="550">Se presento un error al realizar la consulta del Metodo ConsultarRadicado.</response>
+        </member>
+        <member name="M:ANLA.Artemisa.GestionDocumental.Api.Controllers.RadicadoController.ArchivarRadicado(System.String,System.String)">
+            <summary>
+            Permite realizar el archivo de un radicado específico.
+            </summary>
+            <remarks>
+            Metodo que ermite realizar el archivo de un radicado específico.
+            </remarks>
+            <param name="Usuario">Usuario con acceso a consultar.</param>
+            <param name="Radicado">Número de radicado a consultar.</param>
+            <returns> Permite realizar el archivo de un radicado específico.</returns>
+            <response code="200">El archivo del radicado se realizó con éxito y se devolvió la información del radicado.</response>
+            <response code="404">No se pudo archivar el radicado especificado.</response>
+            <response code="550">Se presento un error al ejecutar el Metodo ArchivarRadicado.</response>
+        </member>
+        <member name="T:ANLA.Artemisa.GestionDocumental.Api.Controllers.TablasRetencionDocumentalController">
+            <summary>
+            TablasRetencionDocumentalController
+            </summary>
+        </member>
+        <member name="M:ANLA.Artemisa.GestionDocumental.Api.Controllers.TablasRetencionDocumentalController.#ctor(ANLA.Artemisa.GestionDocumental.Api.Services.ITablasRetencionDocumentalService,Microsoft.Extensions.Logging.ILogger{ANLA.Artemisa.GestionDocumental.Api.Controllers.TablasRetencionDocumentalController})">
+            <summary>
+            Constructor TablasRetencionDocumentalController
+            </summary>
+            <param name="TablasRetencionDocumentalServices"></param>
+            <param name="logger"></param>
+        </member>
+        <member name="M:ANLA.Artemisa.GestionDocumental.Api.Controllers.TablasRetencionDocumentalController.AplicarTRDDependencia(System.String,System.String)">
+            <summary>
+            Permite Aplicar Tablas de Retencion Documental por Dependencia.
+            </summary>
+            <remarks>
+            Metodo que permite Aplicar Tablas de Retencion Documental por Dependencia.
+            </remarks>
+            <param name="Usuario">Usuario con acceso a consultar.</param>
+            <param name="Documento">Número de radicado a consultar.</param>
+            <returns> Permite Aplicar Tablas de Retencion Documental por Dependencia.</returns>
+            <response code="200">Aplicacion de Tablas de Retencion Documental por Dependencia con éxito y se devolvió la información del radicado.</response>
+            <response code="404">No se pudo Aplicar Tablas de Retencion Documental por Dependencia..</response>
+            <response code="550">Se presento un error al ejecutar el Metodo AplicarTRDDependencia.</response>
+        </member>
+        <member name="T:ANLA.Artemisa.GestionDocumental.Api.Dto.Radicado.IncluirRadicadoAExpediente">
+            <summary>
+            DTO IncluirRadicadoAExpediente
+            </summary>
+        </member>
+        <member name="T:ANLA.Artemisa.GestionDocumental.Api.Models.ConsultarRadicado">
+            <summary>
+            ConsultarRadicado
+            </summary>
+        </member>
+        <member name="T:ANLA.Artemisa.GestionDocumental.Api.Models.IncluirRadicadoAExpediente">
+            <summary>
+            IncluirRadicadoAExpediente
+            </summary>
+        </member>
+        <member name="T:ANLA.Artemisa.GestionDocumental.Api.Models.Radicado">
+            <summary>
+            Radicado
+            </summary>
+        </member>
+        <member name="T:ANLA.Artemisa.GestionDocumental.Api.Models.Radicado.RespuestaEstado">
+            <summary>
+            RespuestaEstado
+            </summary>
+        </member>
+        <member name="T:ANLA.Artemisa.GestionDocumental.Api.Models.Radicado.RespuestaServicio">
+            <summary>
+            RespuestaServicio
+            </summary>
+        </member>
+        <member name="T:ANLA.Artemisa.GestionDocumental.Api.Repositories.DocumentoRepositories">
+            <summary>
+            DocumentoRepositories
+            </summary>
+        </member>
+        <member name="M:ANLA.Artemisa.GestionDocumental.Api.Repositories.DocumentoRepositories.#ctor(AutoMapper.IMapper,Microsoft.Extensions.Logging.ILogger{ANLA.Artemisa.GestionDocumental.Api.Repositories.DocumentoRepositories})">
+            <summary>
+            DocumentoRepositories
+            </summary>
+            <param name="mapper"></param>
+            <param name="logger"></param>
+        </member>
+        <member name="M:ANLA.Artemisa.GestionDocumental.Api.Repositories.DocumentoRepositories.ConsultarDocumentoRepositories(System.String,System.String)">
+            <summary>
+            ConsultarDocumentoRepositories
+            </summary>
+            <param name="Usuario"></param>
+            <param name="Documento"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ANLA.Artemisa.GestionDocumental.Api.Repositories.DocumentoRepositories.CargarDocumentoElectronicoRepositories(System.String,System.String)">
+            <summary>
+            CargarDocumentoElectronicoRepositories
+            </summary>
+            <param name="Usuario"></param>
+            <param name="Documento"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ANLA.Artemisa.GestionDocumental.Api.Repositories.IDocumentoRepositories">
+            <summary>
+            Intefaz IDocumentoRepositories
+            </summary>
+        </member>
+        <member name="M:ANLA.Artemisa.GestionDocumental.Api.Repositories.IDocumentoRepositories.ConsultarDocumentoRepositories(System.String,System.String)">
+            <summary>
+            ConsultarDocumentoRepositories
+            </summary>
+            <param name="Usuario"></param>
+            <param name="Documento"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ANLA.Artemisa.GestionDocumental.Api.Repositories.IDocumentoRepositories.CargarDocumentoElectronicoRepositories(System.String,System.String)">
+            <summary>
+            CargarDocumentoElectronicoRepositories
+            </summary>
+            <param name="Usuario"></param>
+            <param name="Documento"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ANLA.Artemisa.GestionDocumental.Api.Repositories.ExpedienteRepositories">
+            <summary>
+            ExpedienteRepositories
+            </summary>
+        </member>
+        <member name="M:ANLA.Artemisa.GestionDocumental.Api.Repositories.ExpedienteRepositories.#ctor(AutoMapper.IMapper,Microsoft.Extensions.Logging.ILogger{ANLA.Artemisa.GestionDocumental.Api.Repositories.ExpedienteRepositories})">
+            <summary>
+            Constructor ExpedienteRepositories
+            </summary>
+            <param name="mapper"></param>
+            <param name="logger"></param>
+        </member>
+        <member name="M:ANLA.Artemisa.GestionDocumental.Api.Repositories.ExpedienteRepositories.ConsultarExpedienteRepositories(System.String,System.String)">
+            <summary>
+            ConsultarExpedienteRepositories
+            </summary>
+            <param name="Usuario"></param>
+            <param name="Expediente"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ANLA.Artemisa.GestionDocumental.Api.Repositories.IExpedienteRepositories">
+            <summary>
+            Intefaz IExpedienteRepositories
+            </summary>
+        </member>
+        <member name="M:ANLA.Artemisa.GestionDocumental.Api.Repositories.IExpedienteRepositories.ConsultarExpedienteRepositories(System.String,System.String)">
+            <summary>
+            ConsultarExpedienteRepositories
+            </summary>
+            <param name="Usuario"></param>
+            <param name="Expediente"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ANLA.Artemisa.GestionDocumental.Api.Repositories.IRadicadoRepositories">
+            <summary>
+            Interfaz IRadicadoRepositories
+            </summary>
+        </member>
+        <member name="M:ANLA.Artemisa.GestionDocumental.Api.Repositories.IRadicadoRepositories.ConsultarRadicadoRepositories(System.String,System.String)">
+            <summary>
+            ConsultarRadicadoRepositories
+            </summary>
+            <param name="Usuario"></param>
+            <param name="Radicado"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ANLA.Artemisa.GestionDocumental.Api.Repositories.IRadicadoRepositories.IncluirRadicadoAExpedienteRepositories(System.String,System.String)">
+            <summary>
+            IncluirRadicadoAExpedienteRepositories
+            </summary>
+            <param name="Usuario"></param>
+            <param name="Radicado"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ANLA.Artemisa.GestionDocumental.Api.Repositories.IRadicadoRepositories.ConsultarImagenRadicadoRepositories(System.String,System.String)">
+            <summary>
+            ConsultarImagenRadicadoRepositories
+            </summary>
+            <param name="Usuario"></param>
+            <param name="Radicado"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ANLA.Artemisa.GestionDocumental.Api.Repositories.IRadicadoRepositories.ArchivarRadicadoRepositories(System.String,System.String)">
+            <summary>
+            ArchivarRadicadoRepositories
+            </summary>
+            <param name="Usuario"></param>
+            <param name="Radicado"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ANLA.Artemisa.GestionDocumental.Api.Repositories.RadicadoRepositories">
+            <summary>
+            RadicadoRepositories
+            </summary>
+        </member>
+        <member name="M:ANLA.Artemisa.GestionDocumental.Api.Repositories.RadicadoRepositories.#ctor(AutoMapper.IMapper,Microsoft.Extensions.Logging.ILogger{ANLA.Artemisa.GestionDocumental.Api.Repositories.RadicadoRepositories})">
+            <summary>
+            Constructor RadicadoRepositories
+            </summary>
+            <param name="mapper"></param>
+            <param name="logger"></param>
+        </member>
+        <member name="M:ANLA.Artemisa.GestionDocumental.Api.Repositories.RadicadoRepositories.ConsultarRadicadoRepositories(System.String,System.String)">
+            <summary>
+            ConsultarRadicadoRepositories
+            </summary>
+            <param name="Usuario"></param>
+            <param name="Radicado"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ANLA.Artemisa.GestionDocumental.Api.Repositories.RadicadoRepositories.IncluirRadicadoAExpedienteRepositories(System.String,System.String)">
+            <summary>
+            IncluirRadicadoAExpedienteRepositories
+            </summary>
+            <param name="Usuario"></param>
+            <param name="Radicado"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ANLA.Artemisa.GestionDocumental.Api.Repositories.RadicadoRepositories.ConsultarImagenRadicadoRepositories(System.String,System.String)">
+            <summary>
+            ConsultarImagenRadicadoRepositories
+            </summary>
+            <param name="Usuario"></param>
+            <param name="Radicado"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ANLA.Artemisa.GestionDocumental.Api.Repositories.RadicadoRepositories.ArchivarRadicadoRepositories(System.String,System.String)">
+            <summary>
+            ArchivarRadicadoRepositories
+            </summary>
+            <param name="Usuario"></param>
+            <param name="Radicado"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ANLA.Artemisa.GestionDocumental.Api.Repositories.ITablasRetencionDocumentalRepositories">
+            <summary>
+            Interfaz ITablasRetencionDocumentalRepositories
+            </summary>
+        </member>
+        <member name="M:ANLA.Artemisa.GestionDocumental.Api.Repositories.ITablasRetencionDocumentalRepositories.AplicarTRDDependencia(System.String,System.String)">
+            <summary>
+            AplicarTRDDependencia
+            </summary>
+            <param name="Usuario"></param>
+            <param name="Radicado"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ANLA.Artemisa.GestionDocumental.Api.Repositories.TablasRetencionDocumentalRepositories">
+            <summary>
+            TablasRetencionDocumentalRepositories
+            </summary>
+        </member>
+        <member name="M:ANLA.Artemisa.GestionDocumental.Api.Repositories.TablasRetencionDocumentalRepositories.#ctor(AutoMapper.IMapper,Microsoft.Extensions.Logging.ILogger{ANLA.Artemisa.GestionDocumental.Api.Repositories.TablasRetencionDocumentalRepositories})">
+            <summary>
+            Constructor TablasRetencionDocumentalRepositories
+            </summary>
+            <param name="mapper"></param>
+            <param name="logger"></param>
+        </member>
+        <member name="M:ANLA.Artemisa.GestionDocumental.Api.Repositories.TablasRetencionDocumentalRepositories.AplicarTRDDependenciaRepositories(System.String,System.String)">
+            <summary>
+            AplicarTRDDependenciaRepositories
+            </summary>
+            <param name="Usuario"></param>
+            <param name="Radicado"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ANLA.Artemisa.GestionDocumental.Api.Services.DocumentoService">
+            <summary>
+            DocumentoService
+            </summary>
+        </member>
+        <member name="M:ANLA.Artemisa.GestionDocumental.Api.Services.DocumentoService.#ctor(ANLA.Artemisa.GestionDocumental.Api.Repositories.IDocumentoRepositories,Microsoft.Extensions.Logging.ILogger{ANLA.Artemisa.GestionDocumental.Api.Services.DocumentoService})">
+            <summary>
+            Constructor DocumentoService
+            </summary>
+            <param name="DocumentoRepositories"></param>
+            <param name="logger"></param>
+        </member>
+        <member name="M:ANLA.Artemisa.GestionDocumental.Api.Services.DocumentoService.ConsultarDocumentoService(System.String,System.String)">
+            <summary>
+            ConsultarDocumentoService
+            </summary>
+            <param name="Usuario"></param>
+            <param name="Documento"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ANLA.Artemisa.GestionDocumental.Api.Services.DocumentoService.CargarDocumentoElectronicoService(System.String,System.String)">
+            <summary>
+            CargarDocumentoElectronicoService
+            </summary>
+            <param name="Usuario"></param>
+            <param name="Documento"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ANLA.Artemisa.GestionDocumental.Api.Services.IDocumentoService">
+            <summary>
+            IDocumentoService
+            </summary>
+        </member>
+        <member name="M:ANLA.Artemisa.GestionDocumental.Api.Services.IDocumentoService.ConsultarDocumentoService(System.String,System.String)">
+            <summary>
+            ConsultarDocumentoService
+            </summary>
+            <param name="Usuario"></param>
+            <param name="Documento"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ANLA.Artemisa.GestionDocumental.Api.Services.IDocumentoService.CargarDocumentoElectronicoService(System.String,System.String)">
+            <summary>
+            CargarDocumentoElectronicoService
+            </summary>
+            <param name="Usuario"></param>
+            <param name="Documento"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ANLA.Artemisa.GestionDocumental.Api.Services.ExpedienteService">
+            <summary>
+            ExpedienteService
+            </summary>
+        </member>
+        <member name="M:ANLA.Artemisa.GestionDocumental.Api.Services.ExpedienteService.#ctor(ANLA.Artemisa.GestionDocumental.Api.Repositories.IExpedienteRepositories,Microsoft.Extensions.Logging.ILogger{ANLA.Artemisa.GestionDocumental.Api.Services.ExpedienteService})">
+            <summary>
+            Constructor ExpedienteService
+            </summary>
+            <param name="ExpedienteRepositories"></param>
+            <param name="logger"></param>
+        </member>
+        <member name="M:ANLA.Artemisa.GestionDocumental.Api.Services.ExpedienteService.ConsultarExpedienteService(System.String,System.String)">
+            <summary>
+            ConsultarExpedienteService
+            </summary>
+            <param name="Usuario"></param>
+            <param name="Expediente"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ANLA.Artemisa.GestionDocumental.Api.Services.IExpedienteService">
+            <summary>
+            Interfaz IExpedienteService
+            </summary>
+        </member>
+        <member name="M:ANLA.Artemisa.GestionDocumental.Api.Services.IExpedienteService.ConsultarExpedienteService(System.String,System.String)">
+            <summary>
+            ConsultarExpedienteService
+            </summary>
+            <param name="Usuario"></param>
+            <param name="Expediente"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ANLA.Artemisa.GestionDocumental.Api.Services.IRadicadoService">
+            <summary>
+            Interfaz IRadicadoService
+            </summary>
+        </member>
+        <member name="M:ANLA.Artemisa.GestionDocumental.Api.Services.IRadicadoService.ConsultarRadicadoService(System.String,System.String)">
+            <summary>
+            ConsultarRadicadoService
+            </summary>
+            <param name="Usuario"></param>
+            <param name="Radicado"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ANLA.Artemisa.GestionDocumental.Api.Services.IRadicadoService.IncluirRadicadoAExpedienteService(System.String,System.String)">
+            <summary>
+            IncluirRadicadoAExpedienteService
+            </summary>
+            <param name="Usuario"></param>
+            <param name="Radicado"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ANLA.Artemisa.GestionDocumental.Api.Services.IRadicadoService.ConsultarImagenRadicadoService(System.String,System.String)">
+            <summary>
+            ConsultarImagenRadicadoService
+            </summary>
+            <param name="Usuario"></param>
+            <param name="Radicado"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ANLA.Artemisa.GestionDocumental.Api.Services.IRadicadoService.ArchivarRadicadoService(System.String,System.String)">
+            <summary>
+            ArchivarRadicadoService
+            </summary>
+            <param name="Usuario"></param>
+            <param name="Radicado"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ANLA.Artemisa.GestionDocumental.Api.Services.ITablasRetencionDocumentalService">
+            <summary>
+            Interfaz ITablasRetencionDocumentalService
+            </summary>
+        </member>
+        <member name="M:ANLA.Artemisa.GestionDocumental.Api.Services.ITablasRetencionDocumentalService.AplicarTRDDependencia(System.String,System.String)">
+            <summary>
+            AplicarTRDDependencia
+            </summary>
+            <param name="Usuario"></param>
+            <param name="Documento"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ANLA.Artemisa.GestionDocumental.Api.Services.TablasRetencionDocumentalService">
+            <summary>
+            TablasRetencionDocumentalService
+            </summary>
+        </member>
+        <member name="M:ANLA.Artemisa.GestionDocumental.Api.Services.TablasRetencionDocumentalService.#ctor(ANLA.Artemisa.GestionDocumental.Api.Repositories.ITablasRetencionDocumentalRepositories,Microsoft.Extensions.Logging.ILogger{ANLA.Artemisa.GestionDocumental.Api.Services.TablasRetencionDocumentalService})">
+            <summary>
+            Constructor TablasRetencionDocumentalService
+            </summary>
+            <param name="TablasRetencionDocumentalRepositories"></param>
+            <param name="logger"></param>
+        </member>
+        <member name="M:ANLA.Artemisa.GestionDocumental.Api.Services.TablasRetencionDocumentalService.AplicarTRDDependencia(System.String,System.String)">
+            <summary>
+            AplicarTRDDependencia
+            </summary>
+            <param name="Usuario"></param>
+            <param name="Documento"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ANLA.Artemisa.GestionDocumentalApi.Dto.JwtModel">
+            <summary>
+            DTO JwtModel
+            </summary>
+        </member>
+        <member name="T:ANLA.Artemisa.GestionDocumentalApi.Dto.SimulacionJWT">
+            <summary>
+            DTO SimulacionJWT
+            </summary>
+        </member>
+        <member name="T:ANLA.Artemisa.GestionDocumentalApi.Extentions.DocumentoExtentions">
+            <summary>
+            DocumentoExtentions
+            </summary>
+        </member>
+        <member name="M:ANLA.Artemisa.GestionDocumentalApi.Extentions.DocumentoExtentions.AddDocumentoExtentions(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            AddDocumentoExtentions
+            </summary>
+            <param name="services"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ANLA.Artemisa.GestionDocumentalApi.Extentions.ExpedienteExtentions">
+            <summary>
+            ExpedienteExtentions
+            </summary>
+        </member>
+        <member name="M:ANLA.Artemisa.GestionDocumentalApi.Extentions.ExpedienteExtentions.AddExpedienteExtentions(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            AddExpedienteExtentions
+            </summary>
+            <param name="services"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ANLA.Artemisa.GestionDocumentalApi.Extentions.RadicadoExtentions">
+            <summary>
+            RadicadoExtentions
+            </summary>
+        </member>
+        <member name="M:ANLA.Artemisa.GestionDocumentalApi.Extentions.RadicadoExtentions.AddRadicadoExtentions(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            AddRadicadoExtentions
+            </summary>
+            <param name="services"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Program.Main(System.String[])">
+            <summary>
+            Main
+            </summary>
+            <param name="args"></param>
+        </member>
+    </members>
+</doc>
